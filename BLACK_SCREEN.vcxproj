@@ -74,7 +74,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v143</PlatformToolset>
-    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfMfc>Static</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -121,38 +121,40 @@
     <_ProjectFileVersion>15.0.28127.55</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>./bin\</OutDir>
+    <OutDir>./bin/</OutDir>
     <IntDir>./Build/Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>./bin</OutDir>
+    <OutDir>./bin/</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>./bin\</OutDir>
+    <OutDir>./bin/</OutDir>
     <IntDir>./Build/Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>./bin</OutDir>
+    <OutDir>./bin/</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|Win32'">
-    <OutDir>./Build/Unicode Debug\</OutDir>
+    <OutDir>./bin/</OutDir>
     <IntDir>./Build/Unicode Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>./bin/</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|Win32'">
-    <OutDir>./Build/Unicode Release\</OutDir>
+    <OutDir>./bin/</OutDir>
     <IntDir>./Build/Unicode Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>./bin/</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -168,7 +170,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName)d.exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libcd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -197,7 +199,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName)d.exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libcd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -229,7 +231,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName).exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -256,7 +258,7 @@
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
@@ -264,7 +266,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName).exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -295,7 +297,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName)ud.exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libcd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -324,7 +326,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName)ud.exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libcd;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -356,7 +358,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName)u.exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -391,7 +393,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>./bin/$(ProjectName)u.exe</OutputFile>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
       <IgnoreSpecificDefaultLibraries>libc;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
