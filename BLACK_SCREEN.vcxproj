@@ -412,6 +412,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DialogSub.cpp" />
+    <ClCompile Include="OtherInstance.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -427,6 +428,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DialogSub.h" />
+    <ClInclude Include="OtherInstance.h" />
     <ClInclude Include="Resource\Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="BLACK_SCREENApp.h" />
